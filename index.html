@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Taste of Africa celebrates African food: signature dishes, regional cuisines, recipes and the stories behind them.">
+  <title>Taste of Africa | Home</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Site header: copy this block to every page and move aria-current -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero: background image is set in styles.css (images/hero.jpg) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1 id="hero-title">Welcome to the table of a whole continent</h1>
+          <p>From smoky <mark>jollof rice</mark> to tangy <mark>injera</mark>, African food is built on bold spices, slow cooking and sharing. Start here, pick a dish and cook along.</p>
+          <a class="btn" href="recipes.html">Browse recipes</a>
+          <a class="btn outline" href="about.html">Our story</a>
+        </div>
+        <div class="video-wrap">
+          <!-- Replace YOUTUBE_ID_HERE with the ID of an African food culture video -->
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_HERE"
+                  title="Introduction to African food culture"
+                  loading="lazy"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured dishes -->
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title">Signature dishes</h2>
+        <div class="card-grid">
+
+          <article class="card">
+            <figure>
+              <img src="images/jollof-rice.jpg" alt="A large pot of red jollof rice with fried plantain on the side" loading="lazy">
+              <figcaption>Jollof Rice, West Africa</figcaption>
+            </figure>
+            <div class="card-body">
+              <h3>Jollof Rice</h3>
+              <p>Rice cooked in a rich sauce of <mark>tomato</mark>, onion and <mark>scotch bonnet</mark> pepper. Nigeria and Ghana both claim the best version.</p>
+              <a class="btn" href="jollof-rice.html">View recipe</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="images/injera.jpg" alt="Round injera flatbread topped with colourful Ethiopian stews" loading="lazy">
+              <figcaption>Injera, East Africa</figcaption>
+            </figure>
+            <div class="card-body">
+              <h3>Injera</h3>
+              <p>A soft, slightly sour flatbread made from fermented <mark>teff</mark> flour. It is the plate, the spoon and the meal in one.</p>
+              <a class="btn" href="injera.html">View recipe</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="images/tagine.jpg" alt="A conical clay tagine pot with a lamb and apricot stew inside" loading="lazy">
+              <figcaption>Tagine, North Africa</figcaption>
+            </figure>
+            <div class="card-body">
+              <h3>Tagine</h3>
+              <p>A slow-cooked stew named after its cone-shaped clay pot, flavoured with <mark>saffron</mark>, cumin and preserved lemon.</p>
+              <a class="btn" href="tagine.html">View recipe</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="images/isombe.jpg" alt="A bowl of green isombe made from pounded cassava leaves" loading="lazy">
+              <figcaption>Isombe, East Africa (Rwanda)</figcaption>
+            </figure>
+            <div class="card-body">
+              <h3>Isombe</h3>
+              <p>A Rwandan favourite of pounded <mark>cassava leaves</mark> simmered with onion, eggplant and groundnut paste.</p>
+              <a class="btn" href="isombe.html">View recipe</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore by region -->
+    <section class="section alt" aria-labelledby="regions-title">
+      <div class="container">
+        <h2 id="regions-title">Explore by region</h2>
+        <div class="card-grid">
+
+          <article class="card">
+            <figure>
+              <img src="images/west-africa.jpg" alt="A busy West African market selling peppers, tomatoes and spices" loading="lazy">
+              <figcaption>West Africa</figcaption>
+            </figure>
+            <div class="card-body">
+              <p>Fiery stews, <mark>palm oil</mark> and one-pot rice dishes.</p>
+              <a class="btn" href="west-africa.html">Explore West Africa</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="images/east-africa.jpg" alt="A shared platter of East African food with flatbread and stews" loading="lazy">
+              <figcaption>East Africa</figcaption>
+            </figure>
+            <div class="card-body">
+              <p>Fermented breads, leafy greens and the <mark>berbere</mark> spice blend.</p>
+              <a class="btn" href="east-africa.html">Explore East Africa</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="images/north-africa.jpg" alt="Colourful piles of North African spices in a market stall" loading="lazy">
+              <figcaption>North Africa</figcaption>
+            </figure>
+            <div class="card-body">
+              <p>Couscous, <mark>slow braising</mark> and fragrant spice mixes.</p>
+              <a class="btn" href="north-africa.html">Explore North Africa</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest food trends -->
+    <section class="section" aria-labelledby="trends-title">
+      <div class="container">
+        <h2 id="trends-title">Latest food trends</h2>
+        <div class="card-grid">
+
+          <article class="trend">
+            <h3>Ancient grains return</h3>
+            <p>Cooks around the world are discovering <mark>fonio</mark>, <mark>teff</mark> and sorghum, grains Africa has farmed for centuries.</p>
+          </article>
+
+          <article class="trend">
+            <h3>Plant-forward classics</h3>
+            <p>Dishes built on <mark>cassava leaves</mark>, beans and groundnuts show how African kitchens have long cooked well without much meat.</p>
+          </article>
+
+          <article class="trend">
+            <h3>African spice blends go global</h3>
+            <p>Restaurants far from home now use <mark>suya spice</mark>, <mark>berbere</mark> and <mark>ras el hanout</mark> in everyday menus.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
