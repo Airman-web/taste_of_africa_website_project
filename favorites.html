@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your saved African recipes on Taste of Africa.">
+  <title>Taste of Africa | My Favorites</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html" aria-current="page">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container hero-text">
+        <h1 id="page-title">My favorites</h1>
+        <p>Recipes you saved with the <strong>&hearts; Favorite</strong> button. They are stored in your browser, so they will still be here next time you visit.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Saved recipes">
+      <div class="container">
+        <!-- script.js fills this grid from localStorage -->
+        <div id="favoritesList" class="card-grid"></div>
+
+        <div id="favoritesEmpty" class="empty-state">
+          <h2>No favorites yet</h2>
+          <p>Tap the heart on any recipe to save it here for later.</p>
+          <a class="btn" href="recipes.html">Browse recipes</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
