@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to make Ethiopian injera from teff flour: ingredients, fermenting and cooking method, video tutorial and cultural background.">
+  <title>Taste of Africa | Injera</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Title, story and photo -->
+    <section class="section" aria-labelledby="recipe-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li aria-current="page">Injera</li>
+          </ol>
+        </nav>
+
+        <article class="recipe-hero">
+          <div>
+            <span class="tag">East Africa</span>
+            <h1 id="recipe-title">Injera</h1>
+            <ul class="recipe-meta">
+              <li>Ferment: 2 to 3 days</li>
+              <li>Cook: 30 min</li>
+              <li>Makes: 8 injera</li>
+            </ul>
+            <p>Injera is the daily bread of Ethiopia and Eritrea. It is made from <mark>teff</mark>, a tiny grain first farmed in the Ethiopian highlands thousands of years ago, which is naturally gluten-free and rich in iron.</p>
+            <p>A large injera is laid on a shared tray and covered with stews such as spicy <mark>berbere</mark> lentils. Diners tear off pieces to scoop up the food, and placing a bite into a friend's mouth, called <strong>gursha</strong>, is a sign of love and respect.</p>
+            <button class="fav-btn" type="button" data-recipe-id="injera" aria-pressed="false"><span class="heart" aria-hidden="true">&hearts;</span> <span class="fav-label">Favorite</span></button>
+          </div>
+          <figure>
+            <img src="images/injera.jpg" alt="Round injera flatbread topped with colourful Ethiopian stews">
+            <figcaption>A fasting platter: injera with lentil, cabbage, beetroot and potato dishes.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ingredients and method -->
+    <section class="section alt" aria-label="Ingredients and method">
+      <div class="container two-col">
+
+        <div>
+          <h2>Ingredients</h2>
+          <!-- script.js rescales every .qty using data-qty and data-base-servings -->
+          <div class="servings" data-base-servings="8">
+            <button type="button" data-change="-1" aria-label="Fewer injera">&minus;</button>
+            <span>Injera: <span id="servingCount" aria-live="polite">8</span></span>
+            <button type="button" data-change="1" aria-label="More injera">+</button>
+          </div>
+          <ul class="ingredients">
+            <li><span class="qty" data-qty="2">2</span> cups <mark>teff flour</mark> (brown or ivory)</li>
+            <li><span class="qty" data-qty="3">3</span> cups lukewarm water</li>
+            <li><span class="qty" data-qty="0.25">1/4</span> tsp active dry yeast (helps a first-time starter)</li>
+            <li><span class="qty" data-qty="0.5">1/2</span> tsp salt</li>
+            <li>A little oil for the pan</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Method</h2>
+          <details open>
+            <summary>Day 1: Mix the batter</summary>
+            <ol>
+              <li>Whisk the teff flour, yeast and water in a large glass or plastic bowl until smooth, like thin pancake batter.</li>
+              <li>Cover with a clean cloth and leave at warm room temperature.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Days 2 to 3: Let it <mark>ferment</mark></summary>
+            <ol>
+              <li>Bubbles will form and the batter will smell pleasantly sour. That sourness is the flavour of injera.</li>
+              <li>A layer of yellowish water may rise to the top. Pour most of it off.</li>
+              <li>Stir in the salt and enough water to bring it back to a thin, pourable batter.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Cooking: Pour, steam, never flip</summary>
+            <ol>
+              <li>Heat a large non-stick pan (or a traditional clay <strong>mitad</strong>) over medium heat and wipe it with oil.</li>
+              <li>Pour the batter in a spiral, starting at the outside edge and moving to the centre.</li>
+              <li>When holes ("eyes") cover the surface, put a lid on for about 1 minute to <mark>steam</mark> the top.</li>
+              <li>The injera is ready when the edges lift. Do not flip it. Slide it onto a cloth to cool and repeat.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Serving tips</summary>
+            <ol>
+              <li>Cool injera fully before stacking, or they stick together.</li>
+              <li>Serve with misir wot (spicy red lentils), gomen (collard greens) or doro wat (chicken stew).</li>
+            </ol>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Video tutorial -->
+    <section class="section" aria-labelledby="video-title">
+      <div class="container media">
+        <h2 id="video-title">Watch and cook along</h2>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/NwVSl3FQt78"
+                  title="How to make injera, Ethiopian flatbread, video tutorial"
+                  loading="lazy"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nutrition and map -->
+    <section class="section alt" aria-label="Nutrition and origin">
+      <div class="container two-col">
+        <div>
+          <h2>Nutrition facts</h2>
+          <div class="table-wrap">
+            <table>
+              <caption>Approximate values per injera (1 of 8)</caption>
+              <thead>
+                <tr><th scope="col">Nutrient</th><th scope="col">Amount</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Calories</th><td>160 kcal</td></tr>
+                <tr><th scope="row">Carbohydrates</th><td>32 g</td></tr>
+                <tr><th scope="row">Protein</th><td>6 g</td></tr>
+                <tr><th scope="row">Fat</th><td>1 g</td></tr>
+                <tr><th scope="row">Fibre</th><td>3.5 g</td></tr>
+                <tr><th scope="row">Iron</th><td>3.4 mg</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Values are estimates for 100% teff injera.</p>
+        </div>
+        <div>
+          <h2>Where it comes from</h2>
+          <figure class="map-wrap">
+            <iframe src="https://maps.google.com/maps?q=Ethiopia&amp;z=5&amp;output=embed"
+                    title="Map of Ethiopia, the home of injera"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <figcaption>Ethiopia, where teff has been farmed for thousands of years.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="container">
+        <h2 id="more-title">Keep cooking</h2>
+        <p>Learn more about the food of this region on the <a href="east-africa.html">East Africa page</a>, or try <a href="isombe.html">Isombe</a>, <a href="jollof-rice.html">Jollof Rice</a> or <a href="tagine.html">Chicken Tagine</a> next.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
