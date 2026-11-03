@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to cook Moroccan chicken tagine with preserved lemon and olives: ingredients, method, video tutorial and cultural background.">
+  <title>Taste of Africa | Chicken Tagine</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Title, story and photo -->
+    <section class="section" aria-labelledby="recipe-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li aria-current="page">Chicken Tagine</li>
+          </ol>
+        </nav>
+
+        <article class="recipe-hero">
+          <div>
+            <span class="tag">North Africa</span>
+            <h1 id="recipe-title">Chicken Tagine</h1>
+            <ul class="recipe-meta">
+              <li>Prep: 30 min</li>
+              <li>Cook: 1 hr 30 min</li>
+              <li>Serves: 4</li>
+            </ul>
+            <p>A tagine is both a dish and the clay pot it is cooked in. The tall cone-shaped lid catches the steam and drips it back onto the food, so meat becomes tender with very little water. The method comes from the <strong>Amazigh (Berber)</strong> peoples of Morocco and was later enriched by Arab and Andalusian spices.</p>
+            <p>This version, <em>djaj mqualli</em>, pairs chicken with <mark>saffron</mark>, ginger, salty <mark>preserved lemon</mark> and green olives. In Moroccan homes the pot goes straight to the table and everyone eats from their side of it, scooping with fresh bread.</p>
+            <button class="fav-btn" type="button" data-recipe-id="tagine" aria-pressed="false"><span class="heart" aria-hidden="true">&hearts;</span> <span class="fav-label">Favorite</span></button>
+          </div>
+          <figure>
+            <img src="images/tagine.jpg" alt="Clay tagine pots with cone-shaped lids cooking over hot coals">
+            <figcaption>Tagines slow-cooking over charcoal braziers.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ingredients and method -->
+    <section class="section alt" aria-label="Ingredients and method">
+      <div class="container two-col">
+
+        <div>
+          <h2>Ingredients</h2>
+          <!-- script.js rescales every .qty using data-qty and data-base-servings -->
+          <div class="servings" data-base-servings="4">
+            <button type="button" data-change="-1" aria-label="Fewer servings">&minus;</button>
+            <span>Servings: <span id="servingCount" aria-live="polite">4</span></span>
+            <button type="button" data-change="1" aria-label="More servings">+</button>
+          </div>
+          <ul class="ingredients">
+            <li><span class="qty" data-qty="1200">1200</span> g chicken thighs and drumsticks</li>
+            <li><span class="qty" data-qty="2">2</span> onions, grated</li>
+            <li><span class="qty" data-qty="3">3</span> cloves garlic, crushed</li>
+            <li><span class="qty" data-qty="3">3</span> tbsp olive oil</li>
+            <li><span class="qty" data-qty="1">1</span> tsp ground <mark>ginger</mark></li>
+            <li><span class="qty" data-qty="1">1</span> tsp ground <mark>cumin</mark></li>
+            <li><span class="qty" data-qty="1">1</span> tsp turmeric</li>
+            <li><span class="qty" data-qty="0.5">1/2</span> tsp black pepper</li>
+            <li><span class="qty" data-qty="1">1</span> pinch <mark>saffron</mark> threads, soaked in 2 tbsp warm water</li>
+            <li><span class="qty" data-qty="1">1</span> <mark>preserved lemon</mark></li>
+            <li><span class="qty" data-qty="1">1</span> cup green olives</li>
+            <li><span class="qty" data-qty="1">1</span> cup water</li>
+            <li>A handful of fresh coriander and parsley</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Method</h2>
+          <details open>
+            <summary>Step 1: Marinate the chicken</summary>
+            <ol>
+              <li>Mix the garlic, olive oil, ginger, cumin, turmeric, pepper, saffron water and half the herbs.</li>
+              <li>Rub the mixture all over the chicken and leave for at least 30 minutes, or overnight in the fridge.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Step 2: Build the tagine</summary>
+            <ol>
+              <li>Spread the grated onion over the base of the tagine (or a heavy pot with a lid).</li>
+              <li>Arrange the chicken on top in one layer and pour the water around it.</li>
+              <li>Place a clay tagine on a heat diffuser. Sudden high heat can crack it.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Step 3: <mark>Slow-braise</mark></summary>
+            <ol>
+              <li>Cover and cook on low heat for about 1 hour 15 minutes.</li>
+              <li>Check every 20 minutes and add a splash of water if the sauce looks dry.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Step 4: Finish and serve</summary>
+            <ol>
+              <li>Rinse the preserved lemon, discard the pulp and cut the peel into strips.</li>
+              <li>Add the lemon peel and olives and cook uncovered for 15 minutes so the sauce thickens.</li>
+              <li>Scatter over the remaining herbs and serve with Moroccan bread (khobz) or couscous.</li>
+            </ol>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Video tutorial -->
+    <section class="section" aria-labelledby="video-title">
+      <div class="container media">
+        <h2 id="video-title">Watch and cook along</h2>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/TpsUQ7SbTXs"
+                  title="Moroccan chicken tagine with preserved lemon and olives, video tutorial"
+                  loading="lazy"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nutrition and map -->
+    <section class="section alt" aria-label="Nutrition and origin">
+      <div class="container two-col">
+        <div>
+          <h2>Nutrition facts</h2>
+          <div class="table-wrap">
+            <table>
+              <caption>Approximate values per serving (1 of 4)</caption>
+              <thead>
+                <tr><th scope="col">Nutrient</th><th scope="col">Amount</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Calories</th><td>420 kcal</td></tr>
+                <tr><th scope="row">Carbohydrates</th><td>9 g</td></tr>
+                <tr><th scope="row">Protein</th><td>38 g</td></tr>
+                <tr><th scope="row">Fat</th><td>26 g</td></tr>
+                <tr><th scope="row">Fibre</th><td>2 g</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Values are estimates without bread or couscous.</p>
+        </div>
+        <div>
+          <h2>Where it comes from</h2>
+          <figure class="map-wrap">
+            <iframe src="https://maps.google.com/maps?q=Morocco&amp;z=5&amp;output=embed"
+                    title="Map of Morocco, the home of the tagine"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <figcaption>Morocco, where tagines are cooked in homes and markets every day.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="container">
+        <h2 id="more-title">Keep cooking</h2>
+        <p>Learn more about the food of this region on the <a href="north-africa.html">North Africa page</a>, or try <a href="jollof-rice.html">Jollof Rice</a>, <a href="injera.html">Injera</a> or <a href="isombe.html">Isombe</a> next.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
