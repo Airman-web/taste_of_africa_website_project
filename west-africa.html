@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="West African food culture: staples, spices, cooking techniques and signature dishes from Nigeria, Ghana, Senegal and beyond.">
+  <title>Taste of Africa | West Africa</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="west-africa.html" aria-current="page">West Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-header west" aria-labelledby="page-title">
+      <div class="container hero-text">
+        <h1 id="page-title">West Africa</h1>
+        <p>Nigeria, Ghana, Senegal, Côte d'Ivoire, Mali, Sierra Leone and their neighbours: a region of bright red stews, smoky grills and very generous portions.</p>
+      </div>
+    </section>
+
+    <!-- Food culture and staples -->
+    <section class="section" aria-label="Food culture and staples">
+      <div class="container two-col">
+        <article>
+          <h2>Food culture</h2>
+          <p>West African meals are built around a <strong>starch and a soup</strong>. A ball of fufu, pounded yam or banku is served next to a rich soup or stew, and pieces are pinched off with the right hand to scoop it up. Food is cooked in big pots because it is meant to be shared with family, neighbours and whoever drops by.</p>
+          <p>Flavour comes from <mark>palm oil</mark>, hot <mark>scotch bonnet</mark> peppers, smoked fish and fermented seasonings such as <mark>dawadawa</mark> (locust beans). Street food is huge too: think suya skewers in Lagos, kelewele (spicy fried plantain) in Accra and grilled fish by the beach in Dakar.</p>
+        </article>
+        <article>
+          <h2>Staple foods</h2>
+          <ul class="pill-list">
+            <li>Rice</li>
+            <li>Yam</li>
+            <li>Cassava (gari, fufu)</li>
+            <li>Plantain</li>
+            <li>Millet and fonio</li>
+            <li>Black-eyed peas</li>
+            <li>Groundnuts</li>
+            <li>Okra</li>
+            <li>Egusi (melon seeds)</li>
+            <li>Palm oil</li>
+          </ul>
+          <h3>Key spices</h3>
+          <p><mark>Suya spice (yaji)</mark>, <mark>grains of selim</mark>, alligator pepper, ginger, dried chilli and crayfish powder.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cooking techniques -->
+    <section class="section alt" aria-labelledby="techniques-title">
+      <div class="container">
+        <h2 id="techniques-title">Cooking techniques</h2>
+        <dl class="techniques">
+          <dt>Pounding</dt>
+          <dd>Boiled yam or cassava is <mark>pounded</mark> in a large wooden mortar until smooth and stretchy to make fufu and pounded yam.</dd>
+          <dt>One-pot stewing</dt>
+          <dd>Rice, beans or meat are cooked directly in a reduced tomato and pepper base so every grain soaks up the sauce, as in jollof rice.</dd>
+          <dt>Open-fire grilling</dt>
+          <dd>Thin strips of beef are coated in peanut-based suya spice and <mark>grilled over charcoal</mark>.</dd>
+          <dt>Fermenting</dt>
+          <dd>Maize is <mark>fermented</mark> for kenkey and ogi, and locust beans for dawadawa, adding a deep, savoury taste.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Example dishes -->
+    <section class="section" aria-labelledby="dishes-title">
+      <div class="container">
+        <h2 id="dishes-title">Dishes to try</h2>
+        <div class="card-grid">
+          <article class="trend">
+            <h3><a href="jollof-rice.html">Jollof Rice</a></h3>
+            <p>The famous one-pot party rice. <a href="jollof-rice.html">Read our full recipe</a>.</p>
+          </article>
+          <article class="trend">
+            <h3>Egusi Soup</h3>
+            <p>Ground melon seeds cooked with leafy greens, palm oil and meat or fish. Served with pounded yam.</p>
+          </article>
+          <article class="trend">
+            <h3>Thieboudienne</h3>
+            <p>Senegal's national dish of fish, rice and vegetables in tomato sauce, the ancestor of jollof.</p>
+          </article>
+          <article class="trend">
+            <h3>Suya</h3>
+            <p>Spicy grilled beef skewers sold at night markets across northern Nigeria and beyond.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="section alt" aria-labelledby="video-title">
+      <div class="container media">
+        <h2 id="video-title">Take a street food tour of Lagos</h2>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/SnyKLOgtDxg"
+                  title="Nigerian street food tour in Lagos"
+                  loading="lazy"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="container">
+        <h2 id="more-title">Keep exploring</h2>
+        <p>Travel east to the <a href="east-africa.html">East Africa page</a> or north to the <a href="north-africa.html">North Africa page</a>, or go back to <a href="recipes.html">all recipes</a>.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
