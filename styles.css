@@ -22,6 +22,11 @@
   --link:    #8c1c13;
   --shadow:  0 8px 20px rgba(60, 20, 10, 0.16);
 
+  /* Header matches the page background in light mode */
+  --header-bg:     var(--bg);
+  --header-text:   var(--text);
+  --header-accent: var(--paprika);
+
   --font-head: 'Abril Fatface', Georgia, serif;
   --font-body: 'Nunito', system-ui, sans-serif;
   --radius: 16px;
@@ -38,6 +43,10 @@
   --border:  #4d3622;
   --link:    #f0b84a;
   --shadow:  0 8px 20px rgba(0, 0, 0, 0.5);
+
+  --header-bg:     var(--cocoa);
+  --header-text:   #fff3dc;
+  --header-accent: var(--saffron);
 }
 
 /* ---------- 2. Base ---------- */
@@ -88,20 +97,12 @@ mark {
 .skip-link:focus { top: 1rem; }
 
 .site-header {
-  background: var(--cocoa);
+  background: var(--header-bg);
   position: sticky; top: 0; z-index: 50;
 }
-/* Textile-style stripe band under the header: the one decorative signature */
-.site-header::after,
-.site-footer::before {
-  content: "";
-  display: block;
-  height: 8px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--paprika) 0 24px, var(--saffron) 24px 40px,
-    var(--moss) 40px 56px, var(--cocoa) 56px 64px);
-}
+/* Thin line so the sticky header and the footer stand apart from the page */
+.site-header { border-bottom: 1px solid var(--border); }
+.site-footer { border-top: 1px solid var(--border); }
 
 .header-inner {
   max-width: var(--max); margin: 0 auto; padding: 0.75rem 1.25rem;
@@ -110,7 +111,7 @@ mark {
 }
 .logo {
   font-family: var(--font-head); font-size: 1.6rem;
-  color: var(--saffron); text-decoration: none;
+  color: var(--header-accent); text-decoration: none;
 }
 
 nav ul {
@@ -118,20 +119,22 @@ nav ul {
   display: flex; flex-wrap: wrap; gap: 0.25rem 1rem;
 }
 nav a {
-  color: #fff3dc; text-decoration: none; font-weight: 700;
+  color: var(--header-text); text-decoration: none; font-weight: 700;
   padding: 0.35rem 0.2rem; border-bottom: 3px solid transparent;
   transition: color 0.2s, border-color 0.2s;
 }
 nav a:hover, nav a[aria-current="page"] {
-  color: var(--saffron); border-bottom-color: var(--saffron);
+  color: var(--header-accent); border-bottom-color: var(--header-accent);
 }
+/* The breadcrumb is a <nav> too, so keep it out of the header styling */
+.breadcrumb a { color: var(--link); }
 
 .theme-toggle {
-  background: transparent; color: #fff3dc;
-  border: 2px solid var(--saffron); border-radius: 8px;
+  background: transparent; color: var(--header-text);
+  border: 2px solid var(--header-accent); border-radius: 8px;
   padding: 0.3rem 0.7rem; font: inherit; font-weight: 700; cursor: pointer;
 }
-.theme-toggle:hover { background: var(--saffron); color: var(--cocoa); }
+.theme-toggle:hover { background: var(--header-accent); color: var(--header-bg); }
 
 /* ---------- 4. Hero ---------- */
 .hero {
@@ -169,6 +172,27 @@ nav a:hover, nav a[aria-current="page"] {
 .section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .section.alt { background: var(--sand); }
 
+/* Banner at the top of every inner page; region pages swap the photo */
+.page-header {
+  background:
+    linear-gradient(rgba(35, 15, 5, 0.62), rgba(35, 15, 5, 0.8)),
+    url('images/hero.jpg') center / cover no-repeat;
+  color: #fff8ea;
+  padding: clamp(2.5rem, 7vw, 5rem) 0;
+}
+.page-header.west  { background-image: linear-gradient(rgba(35, 15, 5, 0.62), rgba(35, 15, 5, 0.8)), url('images/west-africa.jpg'); }
+.page-header.east  { background-image: linear-gradient(rgba(35, 15, 5, 0.62), rgba(35, 15, 5, 0.8)), url('images/east-africa.jpg'); }
+.page-header.north { background-image: linear-gradient(rgba(35, 15, 5, 0.62), rgba(35, 15, 5, 0.8)), url('images/north-africa.jpg'); }
+.page-header h1 { color: #fff8ea; }
+.page-header p { font-size: 1.2rem; }
+.page-header .hero-text { animation: rise 0.8s ease-out both; }
+
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0; margin: 0 0 1.5rem; font-size: 0.95rem; }
+.breadcrumb li + li::before { content: "/"; margin-right: 0.4rem; color: var(--muted); }
+
+/* Narrower column for videos and maps so they don't fill wide screens */
+.media { max-width: 52rem; }
+
 .card-grid {
   display: grid; gap: 1.75rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -200,6 +224,28 @@ nav a:hover, nav a[aria-current="page"] {
 .card-body { padding: 1.1rem 1.2rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
 .card-body .btn { margin-top: auto; align-self: flex-start; }
 
+/* Cards wobble on hover (switched off by the reduced-motion rule below) */
+.card:hover, .trend:hover, .stat:hover { animation: wobble 0.5s ease-in-out; }
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-2deg); }
+  40% { transform: rotate(1.5deg); }
+  60% { transform: rotate(-1deg); }
+  80% { transform: rotate(0.5deg); }
+}
+
+/* Row holding "View recipe" and the favourite button */
+.card-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+.card-actions .btn { margin-top: 0; }
+
+/* Small region label, e.g. "West Africa" */
+.tag {
+  display: inline-block; background: var(--moss); color: #fff8ea;
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 0.15rem 0.7rem; border-radius: 999px; margin-bottom: 0.6rem;
+}
+
 .trend {
   background: var(--surface); border-left: 6px solid var(--saffron);
   border-radius: 0 var(--radius) var(--radius) 0;
@@ -224,6 +270,16 @@ nav a:hover, nav a[aria-current="page"] {
 .fav-btn .heart { color: #8a8a8a; font-size: 1.15rem; }
 .fav-btn.is-favorite { border-color: #d62828; }
 .fav-btn.is-favorite .heart { color: #d62828; }
+.fav-btn:hover { border-color: #d62828; }
+.fav-btn .heart { display: inline-block; transition: transform 0.2s; }
+.fav-btn.is-favorite .heart { transform: scale(1.25); }
+
+.results-count { color: var(--muted); font-weight: 700; }
+.empty-state {
+  background: var(--surface); border: 2px dashed var(--border);
+  border-radius: var(--radius); padding: 2rem; text-align: center;
+}
+.empty-state p { margin-left: auto; margin-right: auto; }
 
 /* ---------- 7. Recipe pages ---------- */
 .recipe-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
@@ -251,8 +307,30 @@ details ol { margin: 0.8rem 0 0; padding-left: 1.3rem; }
 table { width: 100%; border-collapse: collapse; background: var(--surface); }
 caption { text-align: left; font-weight: 800; padding-bottom: 0.5rem; }
 th, td { border: 1px solid var(--border); padding: 0.6rem 0.9rem; text-align: left; }
-th { background: var(--cocoa); color: #fff3dc; }
+/* Header row uses theme colours so tables match light and dark mode */
+thead th { background: var(--sand); color: var(--text); }
+tbody th { background: transparent; color: var(--text); }
 
+.recipe-hero figure { margin: 0; }
+.recipe-hero figcaption, .map-wrap figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
+
+/* Prep time, cook time and servings shown under the recipe title */
+.recipe-meta { list-style: none; padding: 0; margin: 0 0 1.2rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.recipe-meta li {
+  background: var(--sand); border-radius: 8px; padding: 0.3rem 0.8rem;
+  font-size: 0.95rem; font-weight: 700;
+}
+
+.ingredients li::marker { color: var(--paprika); }
+.qty { font-weight: 800; color: var(--paprika); }
+[data-theme="dark"] .qty { color: var(--saffron); }
+#servingCount { font-size: 1.3rem; font-weight: 800; min-width: 2ch; text-align: center; }
+
+.table-wrap { overflow-x: auto; max-width: 40rem; }
+tbody tr:nth-child(even) { background: var(--sand); }
+.note { color: var(--muted); font-size: 0.9rem; }
+
+.map-wrap { margin: 0; }
 .map-wrap iframe { width: 100%; height: 22rem; border: 0; border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* ---------- 8. Regions and About ---------- */
@@ -261,6 +339,24 @@ th { background: var(--cocoa); color: #fff3dc; }
   padding-left: 1.2rem; max-width: 50rem;
 }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+
+/* Staples lists and cooking-technique definitions on region pages */
+.pill-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pill-list li {
+  background: var(--surface); border: 2px solid var(--border);
+  border-radius: 999px; padding: 0.25rem 0.9rem; font-weight: 700;
+}
+dl.techniques dt { font-family: var(--font-head); font-size: 1.2rem; color: var(--paprika); }
+dl.techniques dd { margin: 0 0 1rem; }
+[data-theme="dark"] dl.techniques dt { color: var(--saffron); }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1rem; }
+.stat { background: var(--surface); border-radius: var(--radius); padding: 1.2rem; box-shadow: var(--shadow); text-align: center; }
+.stat strong { display: block; font-family: var(--font-head); font-size: 2.2rem; color: var(--paprika); }
+[data-theme="dark"] .stat strong { color: var(--saffron); }
+
+.credits { font-size: 0.9rem; color: var(--muted); }
+.credits li { margin-bottom: 0.3rem; }
 
 /* ---------- 9. Forms ---------- */
 form { max-width: 36rem; }
@@ -277,7 +373,10 @@ input:focus, select:focus, textarea:focus {
   outline: none; border-color: var(--saffron);
   box-shadow: 0 0 0 4px rgba(233, 168, 32, 0.4);
 }
-.error-msg { color: #b3261e; font-weight: 700; margin-top: 0.3rem; min-height: 1.4rem; }
+.error-msg { color: #b3261e; font-weight: 700; margin: 0.3rem 0 0; min-height: 1.4rem; }
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #b3261e; }
+.hint { color: var(--muted); font-size: 0.9rem; margin: 0.3rem 0 0; }
+textarea { resize: vertical; min-height: 9rem; }
 [data-theme="dark"] .error-msg { color: #ff9b8f; }
 
 .confirmation {
@@ -287,20 +386,25 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ---------- 10. Footer ---------- */
-.site-footer { background: var(--cocoa); color: #fff3dc; }
+/* Footer uses the same colours as the header, so both follow the theme */
+.site-footer { background: var(--header-bg); color: var(--header-text); }
 .footer-inner {
   max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.25rem;
   display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem;
 }
-.site-footer h2 { color: var(--saffron); font-size: 1.5rem; }
-.site-footer a { color: var(--saffron); }
+.site-footer h2 { color: var(--header-accent); font-size: 1.5rem; }
+.site-footer a { color: var(--header-accent); }
 .newsletter form { max-width: none; display: flex; gap: 0.6rem; flex-wrap: wrap; }
 .newsletter input { flex: 1 1 14rem; }
-.newsletter label { color: #fff3dc; }
-.copyright { text-align: center; padding: 1rem; border-top: 1px solid #5a3d28; margin: 0; max-width: none; font-size: 0.9rem; }
+.newsletter label { color: var(--header-text); }
+.copyright { text-align: center; padding: 1rem; border-top: 1px solid var(--border); margin: 0; max-width: none; font-size: 0.9rem; }
 
 /* ---------- 11. Utilities ---------- */
 .hidden { display: none !important; }   /* used by the recipe filter */
+
+/* Scroll-in animation: script.js adds .reveal, then .is-visible when on screen */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.reveal.is-visible { opacity: 1; transform: none; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
@@ -311,6 +415,13 @@ input:focus, select:focus, textarea:focus {
   .hero-grid, .recipe-hero, .two-col, .footer-inner { grid-template-columns: 1fr; }
   .header-inner { justify-content: center; }
   .map-wrap iframe { height: 16rem; }
+  nav ul { justify-content: center; }
+  .recipe-hero figure { order: -1; }   /* photo above the text on phones */
+}
+
+@media (max-width: 420px) {
+  body { font-size: 1rem; }
+  .filter-btn { flex: 1 1 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
