@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and filter African recipes by region: Jollof Rice, Injera, Chicken Tagine and Isombe.">
+  <title>Taste of Africa | Recipes</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container hero-text">
+        <h1 id="page-title">Recipes</h1>
+        <p>Four dishes, three regions, one big table. Filter by region, save the ones you want to cook with the <strong>&hearts; Favorite</strong> button, then open a recipe for the full method.</p>
+      </div>
+    </section>
+
+    <!-- Recipe cards: data-region on each card is matched by the filter buttons in script.js -->
+    <section class="section" aria-labelledby="all-recipes-title">
+      <div class="container">
+        <h2 id="all-recipes-title">Choose a region</h2>
+
+        <div class="filters" role="group" aria-label="Filter recipes by region">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="west-africa" aria-pressed="false">West Africa</button>
+          <button class="filter-btn" type="button" data-filter="east-africa" aria-pressed="false">East Africa</button>
+          <button class="filter-btn" type="button" data-filter="north-africa" aria-pressed="false">North Africa</button>
+        </div>
+        <p id="resultsCount" class="results-count" aria-live="polite">Showing 4 of 4 recipes</p>
+
+        <div class="card-grid">
+
+          <article class="card recipe-card" data-region="west-africa">
+            <figure>
+              <img src="images/jollof-rice.jpg" alt="A plate of red jollof rice served with fried plantain" loading="lazy">
+              <figcaption>Jollof Rice, West Africa</figcaption>
+            </figure>
+            <div class="card-body">
+              <span class="tag">West Africa</span>
+              <h3>Jollof Rice</h3>
+              <p>One-pot rice cooked in a smoky sauce of <mark>tomato</mark>, red pepper and <mark>scotch bonnet</mark>. The star of every party.</p>
+              <div class="card-actions">
+                <a class="btn" href="jollof-rice.html">View recipe</a>
+                <button class="fav-btn" type="button" data-recipe-id="jollof-rice" aria-pressed="false"><span class="heart" aria-hidden="true">&hearts;</span> <span class="fav-label">Favorite</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card" data-region="east-africa">
+            <figure>
+              <img src="images/injera.jpg" alt="Round injera flatbread topped with colourful Ethiopian stews" loading="lazy">
+              <figcaption>Injera, East Africa (Ethiopia)</figcaption>
+            </figure>
+            <div class="card-body">
+              <span class="tag">East Africa</span>
+              <h3>Injera</h3>
+              <p>A spongy, tangy flatbread of fermented <mark>teff</mark> flour that doubles as plate and spoon.</p>
+              <div class="card-actions">
+                <a class="btn" href="injera.html">View recipe</a>
+                <button class="fav-btn" type="button" data-recipe-id="injera" aria-pressed="false"><span class="heart" aria-hidden="true">&hearts;</span> <span class="fav-label">Favorite</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card" data-region="north-africa">
+            <figure>
+              <img src="images/tagine.jpg" alt="Clay tagine pots with cone-shaped lids cooking over hot coals" loading="lazy">
+              <figcaption>Chicken Tagine, North Africa (Morocco)</figcaption>
+            </figure>
+            <div class="card-body">
+              <span class="tag">North Africa</span>
+              <h3>Chicken Tagine</h3>
+              <p>Chicken slow-cooked with <mark>saffron</mark>, ginger, <mark>preserved lemon</mark> and green olives.</p>
+              <div class="card-actions">
+                <a class="btn" href="tagine.html">View recipe</a>
+                <button class="fav-btn" type="button" data-recipe-id="tagine" aria-pressed="false"><span class="heart" aria-hidden="true">&hearts;</span> <span class="fav-label">Favorite</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card" data-region="east-africa">
+            <figure>
+              <img src="images/isombe.jpg" alt="A mound of green isombe served over white rice on a wooden plate" loading="lazy">
+              <figcaption>Isombe, East Africa (Rwanda)</figcaption>
+            </figure>
+            <div class="card-body">
+              <span class="tag">East Africa</span>
+              <h3>Isombe</h3>
+              <p>Pounded <mark>cassava leaves</mark> simmered with eggplant, <mark>peanut paste</mark> and palm oil.</p>
+              <div class="card-actions">
+                <a class="btn" href="isombe.html">View recipe</a>
+                <button class="fav-btn" type="button" data-recipe-id="isombe" aria-pressed="false"><span class="heart" aria-hidden="true">&hearts;</span> <span class="fav-label">Favorite</span></button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick comparison table -->
+    <section class="section alt" aria-labelledby="glance-title">
+      <div class="container">
+        <h2 id="glance-title">Recipes at a glance</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Time and difficulty for each recipe</caption>
+            <thead>
+              <tr>
+                <th scope="col">Dish</th>
+                <th scope="col">Country</th>
+                <th scope="col">Total time</th>
+                <th scope="col">Difficulty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><a href="jollof-rice.html">Jollof Rice</a></th>
+                <td>Nigeria, Ghana, Senegal</td>
+                <td>1 hr 15 min</td>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="injera.html">Injera</a></th>
+                <td>Ethiopia, Eritrea</td>
+                <td>3 days (mostly fermenting)</td>
+                <td>Hard</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="tagine.html">Chicken Tagine</a></th>
+                <td>Morocco</td>
+                <td>2 hr</td>
+                <td>Easy</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="isombe.html">Isombe</a></th>
+                <td>Rwanda</td>
+                <td>2 hr</td>
+                <td>Easy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
