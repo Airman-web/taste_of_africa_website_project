@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="East African food culture: staples, spices, cooking techniques and signature dishes from Ethiopia, Kenya, Rwanda, Tanzania and beyond.">
+  <title>Taste of Africa | East Africa</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="east-africa.html" aria-current="page">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-header east" aria-labelledby="page-title">
+      <div class="container hero-text">
+        <h1 id="page-title">East Africa</h1>
+        <p>Ethiopia, Eritrea, Kenya, Tanzania, Uganda, Rwanda and Burundi: highland grains, fertile green hills and a spice coast that traded with the world.</p>
+      </div>
+    </section>
+
+    <!-- Food culture and staples -->
+    <section class="section" aria-label="Food culture and staples">
+      <div class="container two-col">
+        <article>
+          <h2>Food culture</h2>
+          <p>In the Ethiopian and Eritrean highlands, meals are eaten together from one large tray lined with injera. Many families follow Orthodox fasting days with no meat or dairy, which is why the region has so many delicious plant-based stews. Meals often end with a slow <strong>coffee ceremony</strong>, because coffee was first discovered here.</p>
+          <p>Further south, in Kenya, Uganda, Rwanda and Tanzania, everyday plates pair a starch like ugali or matoke with beans, greens and grilled meat (nyama choma). On the Swahili coast and in Zanzibar, centuries of Indian Ocean trade brought <mark>cloves</mark>, <mark>cardamom</mark> and coconut into dishes like pilau and biryani.</p>
+        </article>
+        <article>
+          <h2>Staple foods</h2>
+          <ul class="pill-list">
+            <li>Teff</li>
+            <li>Maize (ugali)</li>
+            <li>Green bananas (matoke)</li>
+            <li>Cassava and its leaves</li>
+            <li>Sorghum</li>
+            <li>Beans and lentils</li>
+            <li>Sweet potatoes</li>
+            <li>Coconut</li>
+            <li>Rice (on the coast)</li>
+          </ul>
+          <h3>Key spices</h3>
+          <p><mark>Berbere</mark> (chilli, fenugreek, coriander and more), <mark>mitmita</mark>, <mark>niter kibbeh</mark> (spiced butter), and Zanzibar's cloves, cinnamon and cardamom.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cooking techniques -->
+    <section class="section alt" aria-labelledby="techniques-title">
+      <div class="container">
+        <h2 id="techniques-title">Cooking techniques</h2>
+        <dl class="techniques">
+          <dt>Fermenting</dt>
+          <dd>Teff batter is left to <mark>ferment</mark> for days to give injera its sour taste and bubbly texture.</dd>
+          <dt>Slow simmering</dt>
+          <dd>Ethiopian wats start by cooking onions for a long time without oil, then <mark>simmering</mark> them with berbere and spiced butter.</dd>
+          <dt>Pounding and boiling greens</dt>
+          <dd>Cassava leaves are pounded and boiled for a long time to make isombe in Rwanda and sombe in Burundi.</dd>
+          <dt>Steaming in banana leaves</dt>
+          <dd>In Uganda, green bananas are wrapped in banana leaves and <mark>steamed</mark>, then mashed into soft matoke.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Example dishes -->
+    <section class="section" aria-labelledby="dishes-title">
+      <div class="container">
+        <h2 id="dishes-title">Dishes to try</h2>
+        <div class="card-grid">
+          <article class="trend">
+            <h3><a href="injera.html">Injera</a></h3>
+            <p>Ethiopia's spongy teff flatbread. <a href="injera.html">Read our full recipe</a>.</p>
+          </article>
+          <article class="trend">
+            <h3><a href="isombe.html">Isombe</a></h3>
+            <p>Rwandan cassava leaves with peanut. <a href="isombe.html">Read our full recipe</a>.</p>
+          </article>
+          <article class="trend">
+            <h3>Doro Wat</h3>
+            <p>A deep red chicken stew with berbere and boiled eggs, served for holidays in Ethiopia.</p>
+          </article>
+          <article class="trend">
+            <h3>Ugali and Sukuma Wiki</h3>
+            <p>Kenya's everyday plate of firm maize porridge with sautéed collard greens.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="section alt" aria-labelledby="video-title">
+      <div class="container media">
+        <h2 id="video-title">How to eat Ethiopian injera</h2>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/hRaZbyLi8z0"
+                  title="How to eat Ethiopian injera"
+                  loading="lazy"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="container">
+        <h2 id="more-title">Keep exploring</h2>
+        <p>Head to the <a href="west-africa.html">West Africa page</a> or the <a href="north-africa.html">North Africa page</a>, or go back to <a href="recipes.html">all recipes</a>.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
