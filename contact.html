@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Taste of Africa: send us a question, a recipe request or your own family recipe.">
+  <title>Taste of Africa | Contact</title>
+
+  <!-- Google Fonts: Abril Fatface for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Taste of Africa</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container hero-text">
+        <h1 id="page-title">Contact us</h1>
+        <p>Have a question, a recipe request or a family dish you want to share? We would love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="container two-col">
+
+        <div>
+          <h2 id="form-title">Send a message</h2>
+
+          <!-- novalidate: script.js checks the fields and shows friendly messages instead -->
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="nameError">
+              <p id="nameError" class="error-msg" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="emailError">
+              <p id="emailError" class="error-msg" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="country">Country</label>
+              <select id="country" name="country" required aria-describedby="countryError">
+                <option value="">Choose your country</option>
+                <option>Nigeria</option>
+                <option>Ghana</option>
+                <option>Senegal</option>
+                <option>Ethiopia</option>
+                <option>Kenya</option>
+                <option>Rwanda</option>
+                <option>Tanzania</option>
+                <option>Morocco</option>
+                <option>Egypt</option>
+                <option>South Africa</option>
+                <option>Other</option>
+              </select>
+              <p id="countryError" class="error-msg" aria-live="polite"></p>
+            </div>
+
+            <!-- <datalist> only works with <input>, so it gives suggestions for the dish field -->
+            <div class="field">
+              <label for="dish">Favourite African dish <span class="note">(optional)</span></label>
+              <input type="text" id="dish" name="dish" list="dishSuggestions" placeholder="Start typing, e.g. Jollof">
+              <datalist id="dishSuggestions">
+                <option value="Jollof Rice"></option>
+                <option value="Injera"></option>
+                <option value="Chicken Tagine"></option>
+                <option value="Isombe"></option>
+                <option value="Egusi Soup"></option>
+                <option value="Couscous"></option>
+                <option value="Ugali"></option>
+                <option value="Bunny Chow"></option>
+              </datalist>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required aria-describedby="charCount messageError"></textarea>
+              <p id="charCount" class="hint" aria-live="polite">0 characters (more than 20 needed)</p>
+              <p id="messageError" class="error-msg" aria-live="polite"></p>
+            </div>
+
+            <button class="btn" type="submit">Send message</button>
+          </form>
+
+          <!-- Shown by script.js after a valid submission -->
+          <p id="confirmation" class="confirmation" role="status" tabindex="-1" hidden></p>
+        </div>
+
+        <aside>
+          <h2>Other ways to reach us</h2>
+          <address>
+            <strong>Taste of Africa</strong><br>
+            Email: e.atigbi@alustudent.com<br>
+            Kigali, Rwanda
+          </address>
+          <p>We reply to every message within two working days. Recipe ideas from your own family kitchen are always welcome.</p>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="newsletter">
+        <h2>Get a new recipe each week</h2>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Sign up</button>
+        </form>
+        <p id="newsletterMessage" role="status"></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="recipes.html">All recipes</a> | <a href="favorites.html">My favorites</a> | <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Taste of Africa. A student project built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
