@@ -75,9 +75,10 @@ function initTheme() {
   function applyTheme() {
     document.documentElement.setAttribute('data-theme', theme);
     if (toggle) {
+      // The button shows an icon only, so the label tells screen readers what it does
       const next = theme === 'dark' ? 'light' : 'dark';
-      toggle.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
       toggle.setAttribute('aria-label', 'Switch to ' + next + ' mode');
+      toggle.title = 'Switch to ' + next + ' mode';
       toggle.setAttribute('aria-pressed', String(theme === 'dark'));
     }
   }
